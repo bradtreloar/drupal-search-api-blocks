@@ -1,0 +1,10 @@
+name = Search API Blocks
+description = Provides a search bar and search keywords summary block for Search API
+core = 7.x
+
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = search_api_views
+
+stylesheets[all][] = css/search_api_blocks.css
+

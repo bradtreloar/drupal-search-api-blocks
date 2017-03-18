@@ -1,0 +1,50 @@
+
+#block-search-api-blocks-search-bar {
+  $font-size: 18px;
+  $height: 32px;
+
+  height: $height;
+  line-height: $height;
+
+  form {
+    background: white;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    right: 0;
+    padding: 0 16px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  input[type='text'] {
+    background: none;
+    border: 0;
+    border-bottom: solid 1px rgba(0,0,0, 0.25);
+    color: inherit;
+    display: block;
+    flex: 1;
+    font-family: inherit;
+    font-size: $font-size;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0 8px;
+  }
+
+  button {
+    background: none;
+    border: none;
+    flex: none;
+    padding: 0;
+    
+    i {
+      font-size: $font-size;
+      height: 32px;
+      text-align: center;
+      vertical-align: middle;
+      width: 32px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements HOOK_block_info
+ */
+function search_api_blocks_block_info() {
+    
+  $blocks['search_bar'] = array(
+    'info' => t('Search Bar'),
+	  'region' => BLOCK_REGION_NONE,
+	  'status' => true,
+    'weight' => 0,
+  );
+  $blocks['search_keywords'] = array(
+    'info' => t('Search Keywords'),
+	  'region' => BLOCK_REGION_NONE,
+	  'status' => true,
+    'weight' => 0,
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements HOOK_block_view()
+ */
+function search_api_blocks_block_view($delta = '')
+{
+  $block = array();
+  switch($delta){
+    case 'search_bar':
+      $block['subject'] = t('Search Bar');
+      $vars['query'] = isset($_GET['query']) ? $_GET['query'] : '';
+      $block['content'] = theme('search_bar', $vars);
+      break;
+    case 'search_keywords':
+      $block['subject'] = t('Search Bar');
+      $vars['query'] = isset($_GET['query']) ? $_GET['query'] : '';
+      $block['content'] = theme('search_keywords', $vars);
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Implements of HOOK_theme()
+ */
+function search_api_blocks_theme() {
+  $themes['search_bar'] = array(
+    'render_element' => 'content',
+    'template'  => 'block--search-api-blocks--search-bar',
+  );  
+  $themes['search_keywords'] = array(
+    'render_element' => 'content',
+    'template'  => 'block--search-api-blocks--search-keywords',
+  );  
+  return $themes;
+}

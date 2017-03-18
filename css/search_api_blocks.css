@@ -1,0 +1,39 @@
+#block-search-api-blocks-search-bar {
+  height: 32px;
+  line-height: 32px; }
+  #block-search-api-blocks-search-bar form {
+    background: white;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    right: 0;
+    padding: 0 16px;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  #block-search-api-blocks-search-bar input[type='text'] {
+    background: none;
+    border: 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.25);
+    color: inherit;
+    display: block;
+    flex: 1;
+    font-family: inherit;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0 8px; }
+  #block-search-api-blocks-search-bar button {
+    background: none;
+    border: none;
+    flex: none;
+    padding: 0; }
+    #block-search-api-blocks-search-bar button i {
+      font-size: 18px;
+      height: 32px;
+      text-align: center;
+      vertical-align: middle;
+      width: 32px; }
+
+/*# sourceMappingURL=search_api_blocks.css.map */
